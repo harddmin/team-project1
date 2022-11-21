@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div th:fragment="cartView">
+	<span>[[${id}]]</span>번 상품입니다<br>
+		제품명: [[${name}]]<br>
+		가격:  [[${price}]]<br>
+		이미지:<br><img th:src="@{'/img/'+${id}+ '.jpg'}" height="500">
+</div>		
+</body>
+</html>

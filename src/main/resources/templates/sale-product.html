@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>세일상품</title>
+</head>
+<body>
+
+<div th:fragment="saleView">
+<br>	
+		<form th:action="@{/product}" method="post">
+			<div class="search_sample">
+					<input type="search"  class="search-field" placeholder="찾고 싶은 상품을 검색해 보세요!" value="" name="keyword" style="border: 2px solid #48acf9;background-color:#ffffff;width: 250px;height: 43px"/>
+					<button type="submit" class="search-submit" >&#128269;</button>
+			</div>
+	
+		</form>
+
+		<br>	
+		<div>
+		<img  height="300px" align="middle"  th:src="@{'/img/'+saleMain.jpg}" alt="메인이미지"></img>
+		</div>
+			<a th:href="@{/saleProduct}"><font size="5px" face="sans-serif"><b>세일상품</b></a></font> &nbsp;&nbsp;&nbsp;
+			<a th:href="@{/bestProduct}">베스트상품</a>&nbsp;&nbsp;&nbsp;
+			<a th:href="@{/newProduct}">신상품</a>
+		<hr>
+		<br>
+		<table style="border-collapse: separate; border-spacing: 10px;">
+			<tr th:each="product : ${list}" th:if="${product.price < 30000}">
+				<td>상품[[${product.id}]]</td>
+				<td><img th:src="@{'/img/'+ ${product.id} + '.jpg'}"
+					height="64"></td>
+				<td>[[${product.name}]]</td>
+				<td>[[${product.price}]]원</td>
+				<td><a th:href="@{'/cartAdd?id=' + ${product.id}}">장바구니에 추가</a></td>
+			</tr>
+		</table>	
+
+</div>
+
+
+</body>
+</html>

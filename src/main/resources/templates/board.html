@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>게시판</title>
+</head>
+<body>
+	<div th:fragment="boardView">
+		<h1>리뷰게시판</h1>
+		<hr>
+		<a class="write" th:href="@{/board/write}">리뷰쓰기</a>
+		<!-- <hr class="deco"> -->
+		<table style="border-collapse: separate; border-spacing: 10px;">
+			<!-- <tr>
+				<th>NUM</th>
+				<th>PRODUCT</th>
+				<th>IMAGE</th>
+				<th>NAME</th>
+				<th>DATE</th>
+				<th>CONTENT</th>
+			</tr> -->
+			<tr th:each="r : ${review}">
+				<td th:text="${r.id}"></td>
+				<td th:text="${r.cosId}"></td>
+				<td><a th:href="@{'/board/content?id=' + ${r.id}}"><img th:src="@{'/img/' + ${r.cosId} + '.jpg'}"
+					height="100"></a></td>
+				<td th:text="${r.name}"></td>
+				<td th:text="${r.r_date}"></td>
+				<td> 
+					<a th:href="@{'/board/content?id=' + ${r.id}}">
+						[[${r.content}]]
+					</a>
+				</td>
+			</tr>
+		</table>
+	</div>	
+</body>
+</html>

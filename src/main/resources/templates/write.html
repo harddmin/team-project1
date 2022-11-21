@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" th:href="@{'/css/board.css'}">
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="/js/board.js"></script>
+</head>
+<body>
+	<div th:fragment="writeView">
+		<h1>글쓰기</h1>
+		<hr class="deco">
+		<form th:action="@{'/board/write_ok'}"
+			  th:object="${reviewForm}"
+			  method="post">
+			  제품: 
+			  <select name="cosId" th:field="*{cosId}">
+			  	<option value="">제품선택</option>
+			  	<option value="1">제품1</option>
+			  	<option value="2">제품2</option>
+			  	<option value="3">제품3</option>
+			  	<option value="4">제품4</option>
+			  	<option value="5">제품5</option>
+			  	<option value="6">제품6</option>
+			  	<option value="7">제품7</option>
+			  	<option value="8">제품8</option>
+			  	<option value="9">제품9</option>
+			  	<option value="10">제품10</option>
+			  	<option value="11">제품11</option>
+			  	<option value="12">제품12</option>
+			  	<option value="13">제품13</option>
+			  	<option value="14">제품14</option>
+			  	<option value="15">제품15</option>
+			  	<option value="16">제품16</option>
+			  	<option value="17">제품17</option>
+			  	<option value="18">제품18</option>
+			  	<option value="19">제품19</option>
+			  	<option value="20">제품20</option>
+			  </select> 
+			  <div th:errors="*{cosId}" class="error-messages"></div> <br>
+			  <!-- <input type="text" name="cosId" th:field="*{cosId}"> --> 
+			  작성자: <input type="text" name="name" th:field="*{name}" placeholder="이름" class="name"> <br>
+			  <div th:errors="*{name}" class="error-messages"></div> 
+			  구매날짜: <input type="date" value="yyyy/MM/dd" name="r_date" th:field="*{r_date}" class="date"> <br>
+			  <div th:errors="*{r_date}" class="error-messages"></div>
+			 
+			  	<textarea name="content" th:field="*{content}"
+			  		rows="5" cols="25" placeholder="리뷰내용" class="content"></textarea> <br>
+			 <div th:errors="*{content}" class="error-messages"></div>
+			 <input type="submit" value="등록" class="button">
+			 
+		</form>
+	</div>	
+</body>
+</html>

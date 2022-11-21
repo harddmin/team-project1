@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>상세페이지</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/board.css}">
+</head>
+<body>
+	<div th:fragment="showView">
+		<h1>상세페이지</h1>
+		<!-- 테이블로 하는방 -->
+		<!-- <table border="1">
+			<tr>
+				<th>ID</th>
+				<th>NAME</th>
+				<th>CONTENT</th>
+			</tr>
+			<tr th:each="a : ${article}">
+				<td th:text="${a.id}"></td>
+				<td th:text="${a.name}"></td>
+				<td th:text="${a.content}"></td>
+			</tr>  
+		 </table>   -->
+		 
+		 <!-- 리스트 형태로 하는방법 -->
+		 <hr class="deco">
+		 <form
+		 	th:action="@{/board/deletereview}"
+		 	th:object="${reviewForm}"
+		 	method="post"
+		 	class="d_button">
+ 		 <input type="hidden" name="id" th:value="${review.id}">
+		 <input type="submit" value="글삭제" class="d_button">
+		 </form>
+		  <ul th:each="r : ${review}">
+			  <li> 글번호: <span th:text="${r.id}"></span></li>
+			  <li> 제품명: <span th:text="${r.cosId}"></span>번 제품 </li>
+			  <li><img th:src="@{'/img/' + ${r.cosId} + '.jpg'}"
+					height="130"></li>
+			  <li> 작성자: <span th:text="${r.name}"></span> </li>
+			  <li> 글내용: <span th:text="${r.content}"></span> </li>
+		 </ul>  
+		 
+		 
+		 <br>
+		 <div th:each="reviewcomment : ${review.reviewCommentList}" class="rc_comment">
+		 <pre>
+		 	댓글: <span th:text="${reviewcomment.name}">강호동</span> <br>
+		 	내용: <span th:text="${reviewcomment.content}">행님아~~ 댓글내용 입니더 이게 무슨 129</span>
+	 	</pre>
+		</div>
+		 <hr class="s_hr">
+		 <form 
+		 	th:action="@{/board/comment_ok}"
+		 	th:object="${reviewCommentForm}"
+		 	method="post">
+		 	<div th:errors="*{name}" class="error-messages">에러발생!</div>
+		 	<input type="hidden" name="review_id"
+		 		th:value="${review.id}">
+		 	<span class="rc">작성자: </span><input type="text" name="name" 
+		 		th:field="*{name}" placeholder="이름" class="rc_write">
+	 		
+	 		<div th:errors="*{content}" class="error-messages">에러발생!</div>
+	 		<textarea name="content" 
+	 			th:field="*{content}"
+	 			rows="5" 
+	 			cols="25" placeholder="댓글내용" class="rc_content"></textarea> <br>
+	 		
+			<input type="submit" value="댓글쓰기" class="rc_button">
+		 
+		 </form>
+		 
+		 <!-- 선생님 방법 -->
+		<!-- <div th:object="${article}"> 
+			id: <span th:text="*{id}"></span> <br>
+			name: <span th:text="*{name}"></span> <br>
+			<p th:text="*{content}"></p>
+		</div> -->
+	</div>	
+
+</body>
+</html>

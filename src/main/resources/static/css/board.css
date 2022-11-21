@@ -1,0 +1,124 @@
+@charset "UTF-8";
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+h1 {
+	color: rgb(121, 87, 80);
+	margin: 20px
+}
+a:hover {
+	text-decoration: none;
+}
+hr {
+	margin-bottom: 25px;
+	width: 90%;
+}
+.deco {
+	margin-top: 25px;
+	border: 1px dashed;
+	color: #999;
+}
+.write {
+	font-size: 18px;
+	float: right; 
+	margin: 12px 100px 0px 0px;
+
+}
+table {
+	margin: 80px 0px 0px 0px ;
+	
+}
+th {
+	padding: 10px;
+	color: #333;
+	/* background-color: #666; */
+	font-weight: normal;
+}
+td {
+	padding: 15px;
+}
+.error-messages {
+	color: red;
+	font-size: 14px;
+}
+
+select {
+	padding: 3px;
+	width: 200px;
+	margin-top: 50px;
+	
+}
+.name {
+	padding: 3px;
+	width: 200px;
+	margin-top: 10px;
+	
+}
+.date {
+	padding: 3px;
+	width: 250px;
+	margin-top: 30px;
+}
+.content {
+	padding: 10px;
+	margin-top: 30px;
+	width: 550px;
+	height: 150px;
+}
+.button {
+	padding: 5px 8px;
+	margin: 10px 0px 0px 513px;
+	background-color: #fff;
+}
+ul li {
+	text-align: left;
+	margin: 20px 0px 0px 117px;
+}
+ul li span {
+	padding: 5px;
+}
+.d_button {
+	padding: 5px 8px;
+	margin: 0px 0px 0px 243px;
+	background-color: #fff;
+}
+.s_hr {
+	margin-top: 100px;
+}
+.rc_comment {
+	text-align: left;
+	margin: 70px -38px -70px -24px;
+	border: 1ps solid red; 
+	color: #0000be;
+	font-size: 13px;
+	font-weight: normal;
+}
+.rc {
+	position: absolute;
+	left: 100px;
+}
+.rc_write {
+	padding: 3px;
+	width: 250px;
+	margin: -4px auto;
+	position: absolute;
+	left: 150px;
+	
+}
+.rc_content {
+	width: 750px;
+	height: 200px;
+	margin: 45px 80px auto;
+	position: absolute;
+	left: 20px;
+	padding: 10px;
+}
+.rc_button {
+	position: absolute;
+	left: 614px;
+	margin: 50px 0px 0px 168px;
+	padding: 5px 8px;
+	background-color: #fff;
+}

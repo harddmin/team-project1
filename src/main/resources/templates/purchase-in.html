@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>장바구니 목록</title>
+<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+	<div th:fragment="error-cart">
+		카트에 상품이 없다.
+	</div>
+	<div th:fragment="purchase-out">
+		구입해주셔서 감사합니다.
+	</div>
+	<div th:fragment="error-empty">
+		이름과 주소를 입력해주세요.
+	</div>
+	<div th:fragment="cartView">
+		<p>현재 [[${#lists.size(cart)}]] 종류의 상품이 있습니다.</p>
+		<hr>
+		<table style="border-collapse: separate; border-spacing: 10px;">
+			<tr th:each="c : ${cart}">
+				<td>상품 [[${c.product.id}]]</td>
+				<td>[[${c.product.name}]]</td>
+				<td><img th:src="@{'/img/' + ${c.product.id} + '.jpg' }" width="120"></td>
+				<td>상품 [[${c.product.price}]]원</td>
+				<td>상품 [[${c.count}]]개</td>
+			</tr>
+		</table>
+		<hr>
+		
+		<div class="box">
+		<form th:action="@{/purchase}" method="post">
+			<input type="text" name="name" placeholder="이름를 입력해 주세요"> </p>
+			<input type="text" name="address" placeholder="주소를 입력해 주세요"></p>
+			<p><input type="submit" value="구입하기"> </p>
+		</form>
+	</div>
+	
+	
+	
+</body>
+</html>
