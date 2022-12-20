@@ -378,4 +378,5 @@ public Page<Post> findAllByTagName(String tagName, Pageable pageable) {
 </br>
 
 ## 6. 회고 / 느낀점
->프로젝트 개발 회고 글: https://zuminternet.github.io/ZUM-Pilot-integer/
+>주어진 시간이 짧은 미니 프로젝트였기 때문에 아쉬움이 많이 남았다.그 중 가장 아쉬운 점은 회원가입 기능을 만들지 못한 것이다.
+핵심적인 부분인 유저 데이터 테이블을 만들지 못했기 때문에 
