@@ -21,11 +21,7 @@
 
 </br>
 
-## 3. ERD 설계
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/final_erd.png)
-
-
-## 4. 핵심 기능
+## 3. 핵심 기능
 이 서비스의 핵심 기능은 구매 기능입니다.
 이용자는 먼저 장바구니에 구매하고 싶은 물품을 담은 후에 장바구니에 담은 물품들을 구매할 수 있습니다.
 
