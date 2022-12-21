@@ -15,7 +15,7 @@
   - Java 8
   - Spring Boot 2.7.5
   - Maven
-  - Mybatis
+  - Spring Jdbc
   - Oracle
   - Thymeleaf
 
