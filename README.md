@@ -30,7 +30,8 @@
 <summary><b>핵심 기능 설명 펼치기</b></summary>
 <div markdown="1">
 
-### 4.1. **장바구니에 물품 추가** :pushpin: [https://github.com/hardmin12/team-project2/blob/main/src/main/java/com/oraclejava/controller/CartAddController.java]
+### 4.1. **장바구니에 물품 추가** :pushpin: [코드 확인]
+  (https://github.com/hardmin12/team-project2/blob/main/src/main/java/com/oraclejava/controller/CartAddController.java)
 
 
 ### 4.2. 사용자 요청
