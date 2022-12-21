@@ -34,7 +34,7 @@
   - 카트에 
 
 
-### 4.2. 사용자 요청
+### 4.2. **장바구니에 담은 물품 구매** :pushpin: [코드 확인](https://github.com/hardmin12/team-project2/blob/main/src/main/java/com/oraclejava/controller/CartAddController.java)
 ![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_vue.png)
 
 - **URL 정규식 체크** :pushpin: [코드 확인](https://github.com/Integerous/goQuality/blob/b587bbff4dce02e3bec4f4787151a9b6fa326319/frontend/src/components/PostInput.vue#L67)
