@@ -30,8 +30,8 @@
 <summary><b>핵심 기능 설명 펼치기</b></summary>
 <div markdown="1">
 
-### 4.1. 전체 흐름
-![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow1.png)
+### 4.1. 장바구니에 물품 추가
+![]([https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow1.png](https://github.com/hardmin12/team-project2/blob/main/src/main/java/com/oraclejava/controller/CartAddController.java))
 
 ### 4.2. 사용자 요청
 ![](https://zuminternet.github.io/images/portal/post/2019-04-22-ZUM-Pilot-integer/flow_vue.png)
